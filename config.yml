@@ -1,0 +1,215 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Notes                          | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Welcome to the cState configuration file!
+#
+# This is the configuration file for v2.0!
+# If you are using an earlier version, or one
+# in the future, such as v3, you may see errors
+# pop up when deploying a cState website.
+#
+# Now, onto the fun part.
+#
+# Hugo is used for building the status page,
+# so this file can be used to change how
+# your status page should behave or look.
+#
+# If you want to use special characters,
+# such as accented letters, you MUST save
+# the file as UTF-8, not ANSI.
+#
+# If cState does not load, ensure that:
+#  - No tabs are present;
+#    YAML only allows spaces
+#  - Indents are correct
+#    YAML hierarchy is based entirely on indentation
+#  - You have "escaped" all apostrophes
+#    in your text: If you want to write "don't",
+#    for example, write "don''t" instead!
+#    Note the doubled apostrophe.
+#  - Text with symbols is enclosed in single
+#    or double quotation marks.
+#
+# If you have problems, create an issue on GitHub:
+# https://github.com/mistermantas/cstate/issues
+
+############################################################
+# +------------------------------------------------------+ #
+# |                  Basic metadata                      | #
+# +------------------------------------------------------+ #
+############################################################
+
+# What is your status page called?
+# Shows up in the browser bar and meta tags
+title: Eggsample App Status
+
+# What language is this site using?
+# Only alters the html[lang] attribute
+#
+# ISO 639-1 defines abbreviations.
+# See:  https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+# Also: https://www.w3schools.com/tags/ref_language_codes.asp
+languageCode: en
+
+# What is the hostname or path to the root?
+# Where is the site hosted?
+#
+# Slash enables relative links.
+#
+# Default: /
+# Example: https://status.example.com/
+baseURL: /
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   Preferences                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+params:
+  # These are your systems. Change them to
+  # change the amount of components.
+  #
+  # For help, see the wiki:
+  # https://github.com/mistermantas/cstate/wiki/Customization
+  systems:
+    -
+      name: Gateway
+    -
+      name: API
+      description: The guts of the application.
+    -
+      name: Media Proxy
+      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
+
+  # What header design should we use?
+  #
+  # Default: true
+  # BOOLEAN; `true`, `false`
+  useLargeHeaderDesign: false
+
+  # Should we show the logo or the title
+  # of the status page?
+  #
+  # Default: false
+  # BOOLEAN; `true`, `false`
+  useLogo: true
+
+  # Where is the logo located, if one is
+  # present at all?
+  #
+  # Recommended: png is best used for
+  # images like logos.
+  #
+  # Recommended: png, bmp, jpg, or gif
+  # for best browser support!
+  logo: /logo.png
+
+  # This is the description that is shown
+  # in the footer and meta tags.
+  #
+  # Default: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
+  description: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
+
+  # Tabs on homepage
+  # Uncomment to enable.
+  #
+  # Format:
+  # customTabs:
+  #  -
+  #    name: Name
+  #    link: https://example.com
+
+  # Auto refresh the page
+  # every ~5 min
+  #
+  # This does nothing but
+  # refresh the page; it
+  # does not send alerts!
+  #
+  # Default: true
+  # BOOLEAN; `true`, `false`
+  autoRefresh: true
+
+  # Incident posts shown
+  # in one page
+  #
+  # NUMERIC; Default: `10`
+  incidentPostsPerPage: 10
+
+  # Colors throughout cState
+  #
+  # Defaults:
+  #
+  # brand: #181818
+  # ok: 228B22
+  # warning: DC143C
+  # down: FF8C00
+  # notice: 708090
+  brand: 181818
+  ok: 228B22
+  disrupted: FF8C00
+  down: DC143C
+  notice: 708090
+
+  # If the status page shows that
+  # there are disruptions or outages
+  # happening, should it keep the
+  # brand header color or drop it
+  # and use the status indication
+  # colors that were just defined?
+  #
+  # Default: true
+  # BOOLEAN; `true`, `false`
+  alwaysKeepBrandColor: true
+
+  # Google Analytics tracking code
+  #
+  # By default, cState does not use
+  # Google Analytics. If you choose
+  # to use it, you may change the
+  # placeholder code below to your
+  # own and thereby enable the
+  # tracking service.
+  #
+  # To disable the analytics, change
+  # the value to the default:
+  #
+  # Default: UA-00000000-1
+  googleAnalytics: UA-00000000-1
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 For developers                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Should posts, which have a publish date
+# from the future, be built? Useful for
+# sharing upcoming maintenance, etc.
+#
+# We recommend to keep this at `true`.
+# BOOLEAN; `true`, `false`
+buildFuture: true
+
+# These options affect the core of cState.
+# Please do not change them if you do not
+# know what you are doing.
+theme: cstate
+
+# If you are developing locally and want
+# to contribute to the cState Git repo,
+# please uncomment this option but do not
+# forget to re-comment it when commiting.
+# themesDir: ../..
+
+# This option tells cState what version
+# your config file is using.
+#
+# Never ever remove this, nor change it,
+# if you have not updated to any other
+# version.
+version: 2
