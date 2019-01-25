@@ -90,7 +90,7 @@ defaultContentLanguage: en
 # localhost should automatically work.
 #
 # Example: https://status.example.com/
-baseURL: https://status.example.com
+baseURL: https://cstate.mnts.lt
 
 ############################################################
 # +------------------------------------------------------+ #
