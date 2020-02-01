@@ -43,7 +43,7 @@
 
 # What is your status page called?
 # Shows up in the browser bar and meta tags
-title: Eggsample Status
+title: TTS {{system}} Status
 
 # Should posts, which have a publish date
 # from the future, be built? Useful for
