@@ -1,0 +1,33 @@
+{{ if .Site.Params.enableCustomHTML }}
+  {{ partial "custom/above-header" . }}
+{{ end }}
+
+{{ if .Site.Params.useLargeHeaderDesign }}
+<div class="header header--large">
+  <div class="contain contain--more center">
+    <a href="/" class="header__logo">
+      {{ if .Site.Params.useLogo }}
+        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+          {{ else }}
+        <h1>{{ .Site.Title }}</h1>
+      {{ end }}
+    </a>
+  </div>
+</div>
+{{ else }}
+<div class="header">
+  <div class="contain">
+    <a href="/" class="header__logo header__logo--small">
+      {{ if .Site.Params.useLogo }}
+        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+          {{ else }}
+        <h1>{{ .Site.Title }}</h1>
+      {{ end }}
+    </a>
+  </div>
+</div>
+{{ end }}
+
+{{ if .Site.Params.enableCustomHTML }}
+  {{ partial "custom/below-header" . }}
+{{ end }}
