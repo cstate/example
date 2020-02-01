@@ -10,7 +10,13 @@
 # https://github.com/netlify/netlify-cms/blob/master/docs/quick-start.md
 
 backend:
-  name: git-gateway
+  name: github
+  repo: 18f/example
+  base_url: https://federalistapp-staging.18f.gov
+  auth_endpoint: external/auth/github
+  branch: master
+  use_graphql: true
+  preview_context: federalist/build
 media_folder: "static/img"
 public_folder: "/img"
 display_url: /
