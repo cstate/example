@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="no-js">
+  <head>
+    <!-- Basics -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Data -->
+    <meta name="description" content="{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <meta name="generator" content="cState v4.0.1 - https://github.com/cstate/cstate">
+    <meta name="theme-color" content="{{ .Site.Params.brand }}">
+    <script>
+    var themeBrandColor = '{{ .Site.Params.brand }}';
+    var themeOkColor = '{{ .Site.Params.ok }}';
+    var themeNoticeColor = '{{ .Site.Params.notice }}';
+    var themeDisruptedColor = '{{ .Site.Params.disrupted }}';
+    var themeDownColor = '{{ .Site.Params.down }}';
+
+
+    </script>
+    <!-- Sources -->
+    <style>
+    html, body {
+      margin: 0;
+      background: #fff;
+      color: #4d4d4d;
+      font: 100%/1.5 "Inter", "Inter UI", BlinkMacSystemFont, -apple-system, "San Francisco Text", "Roboto", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: rgba(0,0,0, 0.25);
+    }
+
+    ::selection { background: #B4D5FF; }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px dotted currentColor;
+    }
+
+    a:hover { border-bottom-style: solid; }
+    a:active { position: relative; top: 2px; }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      margin: 24px 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1;
+    }
+    h2 { font-size: 26px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+
+    h1, h2, h4 {
+      font-weight: normal;
+      color: #000;
+      font-family: "Inter", "Inter UI", "Segoe UI", BlinkMacSystemFont, -apple-system, "San Francisco Display", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      letter-spacing: -0.4px;
+    }
+
+    h3 {
+      margin: 0;
+      color: #000;
+    }
+
+    img {
+      border: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    /**
+     * Classes
+     */
+
+    a.no-underline { border-bottom: 0; }
+
+    .headline { font-size: 20px; }
+
+    .bold { color: #000; }
+    .hinted { color: #6d6d6d; }
+    .faded { color: #6d6d6d; }
+
+    .clean { margin: 0; }
+
+    .ok { color: {{ .Site.Params.ok }}; }
+    .warning { color: {{ .Site.Params.disrupted }}; }
+    .error { color: {{ .Site.Params.down }}; }
+
+    .contain {
+      max-width: 640px;
+      margin: 16px auto;
+      padding: 16px;
+    }
+
+    .contain--more { max-width: 680px; }
+
+    .center { text-align: center; }
+    .right { text-align: right; }
+    .padding-s { padding: 6px; }
+    .padding { padding: 12px; }
+    .clicky { cursor: pointer; }
+
+
+    /**
+     * Categories
+     */
+
+    /* Categories themselves */
+    .js .category--open .category__closed-marker { display: none; }
+    .js .category--closed .components { display: none; }
+    .js .category--closed .category__open-marker { display: none; }
+
+    /* Markers */
+    .js .hidden-with-js { display: none; }
+    .hide-without-js { display: none; }
+    .js span.hide-without-js { display: inline; }
+    .js div.hide-without-js { display: block; }
+
+
+    /**
+     * UI elements
+     */
+
+    .date {
+      display: block;
+      margin-top: 12px;
+      color: #666;
+      font-variant: small-caps;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      margin-right: 4px;
+      margin-bottom: 2px;
+      background: #eee;
+    }
+
+    .tag:hover { background: #ddd; }
+
+    /**
+     * Section blocks
+     */
+
+    .header {
+      padding: 8px 0;
+      background: {{ .Site.Params.brand }};
+    }
+
+    .header a {
+      color: #fff;
+      font-size: 14px;
+      font-variant: small-caps;
+    }
+      
+    {{ if eq .Params.headerTextColor "black" }}
+      .header a h1 { color: #000; }
+    {{ else if eq .Params.headerTextColor "white" }}
+      .header a h1 { color: #fff; }
+    {{ end }}
+      
+    .header__logo img {
+      height: auto;
+      width: 320px;
+    }
+
+    .header__logo--small img {
+      height: auto;
+      width: 160px;
+    }
+
+    .header--large { padding: 16px; }
+    .header--large a { font-size: 20px; }
+
+    .footer {
+      padding: 10px;
+      background: #f5f5f5;
+    }
+
+    .footer__copyright {
+      display: block;
+      font-variant: small-caps;
+    }
+
+    .footer__copyright a, a.header__logo {
+      border-bottom: 0;
+    }
+
+    /**
+     * Homepage: summaries
+     */
+
+    .summary {
+      padding: 16px;
+      color: #fff;
+    }
+
+    .summary__date:hover {
+      color: #ccc;
+    }
+
+    .summary__date:hover:after {
+      content: ' ⟳ ';
+      color: #fff;
+    }
+
+    /**
+     * Homepage: systems, tooltips
+     */
+
+     .components {
+       border: 2px solid #ddd;
+       border-bottom: 0;
+     }
+
+     .component {
+       color: #000;
+       padding: 16px;
+       border-bottom: 2px solid #ddd;
+     }
+
+    .tooltip { cursor: pointer; position: relative; }
+    .tooltip__text { display: none; }
+    .tooltip:hover .tooltip__text,
+    .tooltip:active .tooltip__text  {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 24px;
+      background: #181818;
+      color: #fff;
+      z-index: 50;
+      padding: 8px;
+      border: 2px solid #242424;
+      font-size: 14px;
+      color: #ccc;
+      width: 320px;
+      height: auto;
+    }
+
+    @media (max-width: 640px) {
+      .tooltip:hover .tooltip__text,
+      .tooltip:active .tooltip__text {
+        width: 50vw;
+      }
+    }
+
+    /**
+     * Tabs
+     */
+
+    .tabs { border-bottom: 1px solid #ccc; }
+    .tabs--inner { padding: 0 16px; margin: 0 auto; }
+    a.tab { display: inline-table; }
+
+    .tab--current {
+      border: 1px solid #ccc;
+      border-bottom-color: #fff;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+    }
+
+    .tab--other {
+      border: 0;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+      color: #757575;
+    }
+
+    .tab--other:hover { color: #000; }
+
+    /**
+     * Articles
+     */
+
+    .issue { display: block; padding: 14px 24px; }
+    .issue:hover, .category__head:hover { background: #f5f5f5; }
+    .issue:active, .category__head:active { background: #eee; }
+
+    .issue h3 { line-height: 1.25; }
+
+    .category__head { margin-top: 20px; }
+
+
+    /**
+     * Specific to the status
+     */
+
+    .status-ok .summary { background: {{ .Site.Params.ok }}; }
+    .status-disrupted .summary, .change-header-color.status-disrupted .header { background: {{ .Site.Params.disrupted }}; }
+    .status-down .summary, .change-header-color.status-down .header { background: {{ .Site.Params.down }}; }
+    .status-notice .summary, .change-header-color.status-notice .header { background: {{ .Site.Params.notice }}; }
+
+    .announcement-box .padding {
+      padding: 16px;
+    }
+
+    .status-disrupted .announcement-box { border: 2px solid {{ .Site.Params.disrupted }}; }
+    .status-down .announcement-box { border: 2px solid {{ .Site.Params.down }}; }
+    .status-notice .announcement-box { border: 2px solid {{ .Site.Params.notice }}; }
+    .status-disrupted .announcement-box,
+    .status-down .announcement-box,
+    .status-notice .announcement-box { border-top: 0; }
+
+    /**
+     * Dynamically show individual component statuses
+     */
+
+    .component-status { float: right; }
+    .component[data-status="ok"] .component-status { color: {{ .Site.Params.ok }}; }
+    .component[data-status="disrupted"] .component-status { color: {{ .Site.Params.disrupted }}; }
+    .component[data-status="down"] .component-status { color: {{ .Site.Params.down }}; }
+    .component[data-status="notice"] .component-status { color: {{ .Site.Params.notice }}; }
+
+    /**
+     * Responsiveness
+     */
+
+    @media (min-width: 640px) {
+      .float-right {
+        float: right;
+        display: inline;
+      }
+    }
+
+    {{ if not .Site.Params.disableDarkMode }}
+      /**
+      * Dark theme
+      */
+      
+      @media (prefers-color-scheme: dark) {
+        /* Basics */
+        html, body { background:  #181a1b; color: #ccc9c1; }
+        h1, h2, h3, h4, a, .bold { color: #fafafa; }
+        hr { border-bottom-color: #3d3d3d; }
+        
+        /* Sections */
+        .footer { background: #1b1d1e; }
+        
+        .components {
+          border: 2px solid #ddd;
+          border-bottom: 0;
+          border-color: #3a3a3a;
+        }
+
+        .component {
+          border-bottom: 2px solid #ddd;
+          color: #e8e6e3;
+          border-bottom-color: #3a3a3a;
+        }
+
+        .tabs { border-bottom-color: #3d3d3d; }
+        .tab--current {
+          border-color: #3d3d3d;
+          border-bottom-color: #181a1b;
+        }
+        .tab--other { color: #757575; }
+        .tab--other:hover { color: #fff; }
+
+        .date { color: #c3bfb6; }
+
+        .tag { background-color: #1d1f20; }
+        .tag:hover { background: #222; }
+        .issue:hover,
+        .category__head:hover { background-color: #212121; }
+
+        /* Colors for dark mode */
+
+        .hinted, .faded { color: #c1bcb3; }
+        .error { color: #ff4242; }
+        .warning {color: #ffde7f; }
+        .ok { color: #7fff7f; }
+
+        .component[data-status="ok"] 
+        .component-status { color: #7fff7f; }
+        .component[data-status="disrupted"] 
+        .component-status { color: #ffde7f; }
+        .component[data-status="notice"] 
+        .component-status { color: #83a4e8; }
+        .component[data-status="down"]
+        .component-status { color: #ff8181; }
+      }
+    {{ end }}
+    </style>
+    {{ if .Site.Params.enableCustomHTML }}
+      {{ partial "custom/meta" . }}
+    {{ end }}
+  </head>

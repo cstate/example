@@ -1,0 +1,5 @@
+{{ if .Site.Params.dateFormat }}
+  <span class="faded">({{ dateFormat .Site.Params.shortDateFormat (.Get 0) }})</span>
+{{ else }}
+  <span class="faded">({{ dateFormat "15:04 — Jan 2" (.Get 0) }})</span>
+{{ end }}

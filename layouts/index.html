@@ -1,0 +1,54 @@
+{{ partial "meta" . }}
+
+{{ $incidents := where .Site.RegularPages "Params.section" "issue" }}
+{{ $active := where $incidents "Params.resolved" "=" false }}
+
+{{ $isNotice := where $active "Params.severity" "=" "notice" }}
+{{ $isDisrupted := where $active "Params.severity" "=" "disrupted" }}
+{{ $isDown := where $active "Params.severity" "=" "down" }}
+
+  <body class="status-homepage status-{{ if $isDown }}down{{ else }}{{ if $isDisrupted}}disrupted{{ else }}{{ if $isNotice }}notice{{ else }}ok{{ end }}{{ end }}{{ end }} {{ if not .Site.Params.alwaysKeepBrandColor }}change-header-color{{ end }}">
+    {{ partial "header" . }}
+
+    <!-- Main -->
+    <div class="contain">
+      <!-- Enable JavaScript banner -->
+      {{ partial "index/noscript" . }}
+
+      <!-- "All systems operational" (or not) banner -->
+      {{ partial "index/summary" . }}
+
+      <!-- Announcement box (title and short summary) -->
+      {{ partial "index/announcements" . }}
+
+      <!-- Auto refresh -->
+      {{ partial "index/autorefresh" . }}
+
+      <!-- Individual component info -->
+      {{ partial "index/components" . }}
+
+      {{ if .Site.Params.enableCustomHTML }}
+        {{ partial "custom/homepage-summary" . }}
+      {{ end }}
+      <!-- End main -->
+    </div>
+
+  <!-- Custom tabs -->
+  {{ partial "index/tabs" . }}
+
+  <!-- All incidents + pagination -->
+  <div class="contain contain--more" id="incidents">
+    {{ if eq .Site.Params.incidentHistoryFormat "yearly" }}
+      {{ partial "index/incidents-yearly" . }}
+    {{ else if eq .Site.Params.incidentHistoryFormat "monthly" }}
+      {{ partial "index/incidents-monthly" . }}
+    {{ else }}
+      {{ partial "index/incidents" . }}
+    {{ end }}
+    <div class="padding"></div>
+  </div>
+
+  {{ partial "js" . }}
+  {{ partial "footer" . }}
+  </body>
+</html>

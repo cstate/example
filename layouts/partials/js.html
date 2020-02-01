@@ -1,0 +1,109 @@
+<script type="text/javascript">
+  /**
+   * Dev toolset
+   */
+
+  console.log('cState v4.0.1 - https://github.com/cstate/cstate');
+  document.getElementsByTagName('html')[0].className = 'js';
+
+  /**
+   * Make theme color pretty
+   */
+
+  if (document.body.className === 'change-header-color') {
+    if (document.body.className === 'status-down') {
+      document.querySelector('meta[name=theme-color]').setAttribute('content', themeDownColor);
+    } else if (document.body.className === 'status-disrupted') {
+      document.querySelector('meta[name=theme-color]').setAttribute('content', themeDisruptedColor);
+    } else {
+      document.querySelector('meta[name=theme-color]').setAttribute('content', themeNoticeColor);
+    }
+  }
+
+  /**
+   * Admin redirect
+   */
+
+  if (window.location.hash.match('access_token')) {
+    document.location.pathname = '/admin';
+  }
+  if (window.location.hash.match('invite_token')) {
+    document.location.pathname = '/admin';
+  }
+  if (window.location.hash.match('confirmation_token')) {
+    document.location.pathname = '/admin';
+  }
+  if (window.location.hash.match('email_change_token')) {
+    document.location.pathname = '/admin';
+  }
+  if (window.location.hash.match('recovery_token')) {
+    document.location.pathname = '/admin';
+  }
+
+  /**
+   * Timer
+   */
+
+  function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+  }
+
+  if (hasClass(document.querySelector('body'), 'status-homepage')) {
+    var lastUpdated = document.querySelector('.summary__date');
+    lastUpdated.innerHTML = '{{ T "lastChecked" }} {{ T "justNow" }}';
+
+    var lastUpdate = new Date();
+
+    function timeSince(date) {
+      var seconds = Math.floor((new Date() - date) / 1000);
+
+      var interval = Math.floor(seconds / 31536000);
+
+      if (interval > 1) {
+        return interval + ' {{ T "yearsAgo" }}';
+      }
+      interval = Math.floor(seconds / 2592000);
+      if (interval > 1) {
+        return interval + ' {{ T "monthsAgo" }}';
+      }
+      interval = Math.floor(seconds / 86400);
+      if (interval > 1) {
+        return interval + '{{ T "daysAgo" }}';
+      }
+      interval = Math.floor(seconds / 3600);
+      if (interval > 1) {
+        return interval + '{{ T "hoursAgo" }}';
+      }
+      interval = Math.floor(seconds / 60);
+      if (interval > 1) {
+        return interval + ' {{ T "minsAgo" }}';
+      }
+      return Math.floor(seconds) + '{{ T "secondsAgo" }}';
+    }
+    var aDay = 24*60*60*1000;
+  }
+
+  window.setInterval(function() {
+    if (hasClass(document.querySelector('body'), 'status-homepage')) {
+      lastUpdated.innerHTML = '{{ T "lastChecked" }} ' + timeSince(lastUpdate) + ' {{ T "someTimeAgo" }}';
+
+      // Refresh almost every 5m
+      if (lastUpdate > 290000) {
+        location.reload;
+      }
+    }
+  }, 5000)
+</script>
+
+
+{{ if ne .Site.Params.googleAnalytics "UA-00000000-1" }}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script type="text/javascript" defer src="https://www.googletagmanager.com/gtag/js?id=UA-109775664-1"></script>
+  <script type="text/javascript" defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ .Site.Params.googleAnalytics }}');
+  </script>
+{{ end }}
