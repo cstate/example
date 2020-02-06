@@ -11,7 +11,7 @@
 
 backend:
   name: github
-  repo: 18f/example
+  repo: 18f/static-statuspage-example
   base_url: https://federalistapp-staging.18f.gov
   auth_endpoint: external/auth/github
   branch: master
@@ -20,6 +20,7 @@ backend:
 media_folder: "static/img"
 public_folder: "/img"
 display_url: /
+
 
 # Do not change this!
 collections:
