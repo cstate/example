@@ -16,28 +16,28 @@
 {{ else }}
 
 
-<div class="usa-accordion usa-accordion--bordered site-accordion-code shadow-4 border-left">
+<div class="usa-accordion usa-accordion--bordered site-accordion-code shadow-5">
 {{ if $active }}
 {{ range $active }}
   {{ if $isDown }}
-  <h2><button class="usa-accordion__button usa-alert--error float-right" aria-controls="{{ .Title }}" aria-expanded="true">Outage<br>
+  <button class="usa-accordion__button usa-alert--error float-right" aria-controls="{{ .Title }}" aria-expanded="true">Outage
     {{ range .Params.Affected }}
     <a class="usa-badge usa-badge--alert float-right" href="/affected/{{ . | urlize }}">{{ . }}</a>
     {{ end }}
   {{ end }}
   {{ if $isDisrupted }}
-  <button class="usa-accordion__button usa-alert--warning" aria-controls="{{ .Title }}" aria-expanded="true"><h3>Partial Outage</h3><br>
+  <button class="usa-accordion__button usa-alert--warning" aria-controls="{{ .Title }}" aria-expanded="true">Partial Outage
     {{ range .Params.Affected }}
     <a class="usa-badge usa-badge--warning float-right" href="/affected/{{ . | urlize }}">{{ . }}</a>
     {{ end }}
   {{ end }}
   {{ if $isNotice }}
-  <button class="usa-accordion__button usa-alert--info float-right" aria-controls="{{ .Title }}" aria-expanded="true"><h3>Notice</h3><br>
+  <button class="usa-accordion__button usa-alert--info float-right" aria-controls="{{ .Title }}" aria-expanded="true">Notice
     {{ range .Params.Affected }}
     <a class="usa-badge usa-badge--general" href="/affected/{{ . | urlize }}">{{ . }}</a>
     {{ end }}
   {{ end }}
-  </button></h2>
+  </button>
     <div id="{{ .Title }}" class="usa-accordion__content usa-prose">
     <a class="usa-button usa-button--outline" href="{{ .Permalink }}">{{ .Title }}</a>
       <p>{{ .Content | safeHTML | truncate 500 "…" }}</p>

@@ -5,23 +5,22 @@
 {{ $isDisrupted := where $active "Params.severity" "=" "disrupted" }}
 {{ $isDown := where $active "Params.severity" "=" "down" }}
 
+<div class="usa-accordion shadow-5">
 {{ $systems := .Site.Params.systems }}
 {{ $categories := .Site.Params.categories }}
 {{ range $categories }}
-<div class="usa-accordion shadow-5">
   <h2 class="usa-accordion__heading">
     <button class="usa-accordion__button" aria-controls="{{ .name | urlize }}" aria-expanded="true">
-      <a class="usa-button usa-button--base" href="{{ .name | urlize }}">{{ .name }}</a>
+      <a class="usa-button" href="/affected/{{ .name | urlize }}">{{ .name }}</a>
     </button>
-    <i class="float-right">{{ with .description }}{{ . }}{{ end }}</i>
-  </h2>  
-  <div id="{{ .name | urlize }}" class="usa-accordion__content usa-prose">
+  </h2>   
+  <div id="{{ .name | urlize }}" class="usa-accordion__content">
+    <i class="float-right">{{ .description }}</i> 
     {{ $categorySystems := where $systems "category" "=" .name }}
     {{ range $categorySystems }}
-    <a class="usa-button usa-button--outline" href="{{ .name }}">{{ .name }}</a>
-    <p>{{ .Content | safeHTML | truncate 500 "…" }}</p>
+        <a class="usa-button usa-button--outline" href="{{ .name }}">{{ .name }}</a>
+        <p>{{ .Content | safeHTML | truncate 500 "…" }}</p>
+    {{ end }}   
   </div>
+{{ end }}
 </div>
-{{ end }}
-{{ end }}
-

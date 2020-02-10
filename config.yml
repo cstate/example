@@ -38,7 +38,10 @@ params:
       category: API
     - name: Postgresql
       description: The guts of the application.
-      category: Database    
+      category: Database
+    - name: Redis
+      description: The guts of the application.
+      category: Database         
     - name: Cloudfront
       description: |
         This is the service responsible for serving images, audio, and video. It
