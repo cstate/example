@@ -7,47 +7,62 @@
 {{ $isDisrupted := where $active "Params.severity" "=" "disrupted" }}
 {{ $isDown := where $active "Params.severity" "=" "down" }}
 
+
   <body class="status-homepage status-{{ if $isDown }}down{{ else }}{{ if $isDisrupted}}disrupted{{ else }}{{ if $isNotice }}notice{{ else }}ok{{ end }}{{ end }}{{ end }} {{ if not .Site.Params.alwaysKeepBrandColor }}change-header-color{{ end }}">
     {{ partial "header" . }}
-
+    
     <!-- Main -->
-    <div class="contain">
+    <main id="main-content">
+
       <!-- Enable JavaScript banner -->
       {{ partial "index/noscript" . }}
-
-      <!-- "All systems operational" (or not) banner -->
-      {{ partial "index/summary" . }}
+      
+      <!-- "All systems operational" (or not) banner 
+      {{ partial "index/summary" . }}-->
+      <div class="grid-container">
+        <button class="usa-button usa-button--secondary summary__date clicky float-right" onclick="location.reload()">
+      </div>
 
       <!-- Announcement box (title and short summary) -->
-      {{ partial "index/announcements" . }}
+      <section id="announcements" class="usa-section">
+        
+        <div class="grid-container">
+        <h1>Status</h1>
+        {{ partial "index/announcements" . }}
+        </div>
+      </section>
 
-      <!-- Auto refresh -->
-      {{ partial "index/autorefresh" . }}
+      <!-- Individual component info-->
+      <section id="components" class="usa-section">
+        <div class="grid-container">
+        <h1>Components</h1>
+        {{ partial "index/components" . }}
+        </div>
+        {{ if .Site.Params.enableCustomHTML }}
+          {{ partial "custom/homepage-summary" . }}
+        {{ end }}
+      </section>
 
-      <!-- Individual component info -->
-      {{ partial "index/components" . }}
-
-      {{ if .Site.Params.enableCustomHTML }}
-        {{ partial "custom/homepage-summary" . }}
-      {{ end }}
       <!-- End main -->
-    </div>
 
-  <!-- Custom tabs -->
-  {{ partial "index/tabs" . }}
-
-  <!-- All incidents + pagination -->
-  <div class="contain contain--more" id="incidents">
-    {{ if eq .Site.Params.incidentHistoryFormat "yearly" }}
-      {{ partial "index/incidents-yearly" . }}
-    {{ else if eq .Site.Params.incidentHistoryFormat "monthly" }}
-      {{ partial "index/incidents-monthly" . }}
-    {{ else }}
-      {{ partial "index/incidents" . }}
-    {{ end }}
-    <div class="padding"></div>
-  </div>
-
+      <!-- All incidents + pagination -->
+      <section id="incidents" class="usa-section">
+        <div class="grid-container">
+          <div class="contain contain--more" id="incidents">
+          <h1>Incident History</h1>
+          {{ partial "index/incidents" . }}
+            <!--
+            {{ if eq .Site.Params.incidentHistoryFormat "yearly" }}
+              {{ partial "index/incidents-yearly" . }}
+            {{ else if eq .Site.Params.incidentHistoryFormat "monthly" }}
+              {{ partial "index/incidents-monthly" . }}
+            {{ else }}
+              {{ partial "index/incidents" . }}
+            {{ end }}
+            -->
+          </div>
+        </div>
+      </section>
   {{ partial "js" . }}
   {{ partial "footer" . }}
   </body>

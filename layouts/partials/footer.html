@@ -2,35 +2,65 @@
   {{ partial "custom/above-footer" . }}
 {{ end }}
 
-<div class="footer">
-  <div class="contain">
-    <p><strong class="bold">&copy; {{ .Site.Title }}, {{ now.Year }}</strong>
-       &nbsp; • &nbsp; <a href="#">{{ T "backToTop" }}</a>
-    </p>
-
-    <p>{{ .Site.Params.description | markdownify }}</p>
-
-    <!-- Please keep this one around to help cState grow <3 -->
-    <small class="footer__copyright faded">{{ T "poweredBy" }} <a href="https://github.com/cstate/cstate"><b>cState</b></a></small>
-
-    <hr>
-
-    <p class="hinted">
-      <small>
-        ⚡
-        {{ T "rss" }} —
-        {{ with $.Site.Home.OutputFormats.Get "rss" }}
-          <a href="{{ .Permalink }}" class="no-underline">{{ T "toAllUpdates" }}</a>
-        {{ end }}
-        {{ if not .IsHome }}
-        {{ with .OutputFormats.Get "rss" }}
-          {{ T "or" }} <a href="{{ .Permalink }}" class="no-underline">{{ T "onlyThisFeed" }} ({{ $.Title }})</a>
-        {{ end }}
-        {{ end }}
-      </small>
-    </p>
+<footer class="usa-footer">
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav">
+      <ul class="grid-row grid-gap">
+        <a href="#" class="usa-button">{{ T "backToTop" }}</a>
+      </ul>
+    </nav>
   </div>
-</div>
+
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+          <div class="mobile-lg:grid-col-auto">
+            <img class="usa-footer__logo-img" src="/logo.png" alt="Agency Logo">
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p><b>A static statuspage template managed by:</b><br> GSA's Technology Transformation Service</br>U.S. General Services Administration.<br>1800 F Street Northwest, Washington, DC 20405</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <div class="usa-footer__social-links grid-row grid-gap-1">
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--facebook" href="javascript:void(0);">
+                <span>Facebook</span>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--twitter" href="javascript:void(0);">
+                <span>Twitter</span>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--youtube" href="javascript:void(0);">
+                <span>YouTube</span>
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link usa-social-link--rss" href="javascript:void(0);">
+                <span>RSS</span>
+              </a>
+            </div>
+          </div>
+          <h3 class="usa-footer__contact-heading">Agency Contact Center</h3>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-555-5555">(800) CALL-GOVT</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:info@agency.gov">info@agency.gov</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 {{ if .Site.Params.enableCustomHTML }}
   {{ partial "custom/below-footer" . }}

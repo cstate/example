@@ -4,21 +4,8 @@
 {{ $isNotice := where $active "Params.severity" "=" "notice" }}
 {{ $isDisrupted := where $active "Params.severity" "=" "disrupted" }}
 {{ $isDown := where $active "Params.severity" "=" "down" }}
-
-<div class="summary">
-  <strong>
-    {{ if $isDown }}
-      {{ T "isDown" }}
-    {{ else }}
-    {{ if $isDisrupted }}
-      {{ T "isDisrupted" }}
-    {{ else }}
-    {{ if $isNotice }}
-      {{ T "isNotice" }}
-    {{ else }}
-      {{ T "isOk" }}
-    {{ end }}{{ end }}{{ end }}
-  </strong>
-
-  <div class="summary__date clicky float-right" onclick="location.reload()"></div>
-</div>
+  
+  <!-- Use the accurate heading level to maintain the document outline -->
+  <div class="preview usa-prose site-prose ">
+  <button class="usa-button usa-button--secondary summary__date clicky float-right" onclick="location.reload()">
+  </div>

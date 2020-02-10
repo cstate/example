@@ -1,12 +1,9 @@
 {{ partial "meta" . }}
 {{ $title := .Title }}
 
-  <body class="default list">
-    <header>
-      <div class="contain">
-        <a href="{{ .Site.BaseURL }}">← {{ T "goBack" }} <em>{{ .Site.Title }}</em></a>
-        <div class="padding"></div>
-        <div class="padding"></div>
+<section id="test-section-id" class="usa-section">
+  <div class="grid-container">
+      {{ partial "goback" . }}
 
         <h1 class="clean">{{ $title }}</h1>
 
@@ -25,8 +22,8 @@
       </div>
       {{ $incidents := .Pages }}
     </header>
-
-    <div class="contain contain--more" id="incidents">
+  </div>
+  <div class="grid-container">
       {{ if not $incidents }}
         <div class="padding"></div>
         <h3>{{ T "calmBeforeTheStorm" }}</h3>
@@ -79,10 +76,10 @@
           </div>
         {{ end }}
       {{ end }}
-      <div class="padding"></div>
+      </div>
     </div>
 
     {{ partial "js" . }}
     {{ partial "footer" . }}
-  </body>
-</html>
+  </div>
+</section>

@@ -9,15 +9,7 @@
 
   <body class="issues single">
     <div class="contain">
-      <a href="{{ .Site.BaseURL }}">← {{ T "goBack" }} <em>{{ .Site.Title }}</em></a>
-    </div>
-
-    <div class="contain">
       {{ .Render "issue" }}
     </div>
-
-
-    {{ partial "js" . }}
-    {{ partial "footer" . }}
   </body>
 </html>

@@ -6,9 +6,9 @@ resolvedWhen: 2018-04-25 04:13:59
 # Possible severity levels: down, disrupted, notice
 severity: down
 affected:
-  - API
-  - Media Proxy
-  - Gateway
+  - api
+  - network
+  - database
 section: issue
 ---
 

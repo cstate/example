@@ -8,12 +8,12 @@
 <!-- Pagination is also included with incidents -->
 
 {{ if not $incidents }}
-  <div class="padding"></div>
-  <h3>{{ T "calmBeforeTheStorm" }}</h3>
-  <p>{{ T "noIncidentsDesc" }}</p>
-  <div class="padding"></div>
-  <div class="padding"></div>
-  <div class="padding"></div>
+  <div class="usa-alert usa-alert--success" >
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">{{ T "calmBeforeTheStorm" }}</h3>
+      <p class="usa-alert__text">{{ T "noIncidentsDesc" }}</p>
+    </div>  
+  </div>
 {{ else }}
   {{ $paginator := .Paginate $incidents .Site.Params.incidentPostsPerPage }}
   {{ range $paginator.Pages }}
