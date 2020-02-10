@@ -49,6 +49,7 @@ params:
       category: Network
   useLargeHeaderDesign: false
   useLogo: true
+  logo: img/GSA.png
 #theme: cstate
 preserveTaxonomyNames: true
 taxonomies:
