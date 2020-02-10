@@ -2,35 +2,31 @@
   {{ partial "custom/above-footer" . }}
 {{ end }}
 
-<div class="footer">
-  <div class="contain">
-    <p><strong class="bold">&copy; {{ .Site.Title }}, {{ now.Year }}</strong>
-       &nbsp; • &nbsp; <a href="#">{{ T "backToTop" }}</a>
-    </p>
-
-    <p>{{ .Site.Params.description | markdownify }}</p>
-
-    <!-- Please keep this one around to help cState grow <3 -->
-    <small class="footer__copyright faded">{{ T "poweredBy" }} <a href="https://github.com/cstate/cstate"><b>cState</b></a></small>
-
-    <hr>
-
-    <p class="hinted">
-      <small>
-        ⚡
-        {{ T "rss" }} —
-        {{ with $.Site.Home.OutputFormats.Get "rss" }}
-          <a href="{{ .Permalink }}" class="no-underline">{{ T "toAllUpdates" }}</a>
-        {{ end }}
+<footer class="usa-footer usa-footer-slim" role="contentinfo">
+  <div class="usa-footer-primary-section">
+    <div class="usa-grid-full">
+        <a href="#" class="usa-button">{{ T "backToTop" }}</a>
         {{ if not .IsHome }}
         {{ with .OutputFormats.Get "rss" }}
           {{ T "or" }} <a href="{{ .Permalink }}" class="no-underline">{{ T "onlyThisFeed" }} ({{ $.Title }})</a>
         {{ end }}
         {{ end }}
-      </small>
-    </p>
+    </div>
   </div>
-</div>
+
+  <div class="usa-footer-secondary_section">
+    <div class="usa-grid">
+      <div class="usa-footer-logo width-one-half">
+        <!--<a class="usa-footer-slim-logo-img" href="https://www.gsa.gov/tts" target="_blank"><img src="{{ .Permalink }}" alt="General Services Adminstration"></a>
+        -->  
+      <div class="usa-footer-contact-links width-one-half">
+        <p>A federal government website managed by the <br>Technology Transformation Service</br>U.S. General Services Administration.<br>1800 F Street Northwest, Washington, DC 20405</p>
+        <!--<p><a href="https://www.gsa.gov/portal/content/116609" target="blank">Privacy Policy</a> | <a href="" target="blank">Source Code</a></p>
+        -->  
+     </div>
+    </div>
+  </div>
+</footer>
 
 {{ if .Site.Params.enableCustomHTML }}
   {{ partial "custom/below-footer" . }}

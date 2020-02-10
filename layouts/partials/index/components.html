@@ -5,97 +5,23 @@
 {{ $isDisrupted := where $active "Params.severity" "=" "disrupted" }}
 {{ $isDown := where $active "Params.severity" "=" "down" }}
 
-<!-- Individual info -->
-<div class="categories">
-  {{ $systems := .Site.Params.systems }}
-  {{ $categories := .Site.Params.categories }}
-
-  <script>
-  function toggleCategoryHead(el) {
-    if (el.parentNode.className == 'category category--open') {
-      el.parentNode.className = 'category category--closed';
-    } else {
-      el.parentNode.className = 'category category--open';
-    }
-  }
-  </script>
-
-  {{ range $categories }}
-    <div class="category {{ if .closed }}category--closed{{ else }}category--open{{ end }}" id="{{ .name | urlize }}">
-      {{ if not .untitled }}
-      <div class="bold padding clicky category__head" onclick="toggleCategoryHead(this)">
-        <span class="hide-without-js">
-          <span class="category__closed-marker">⯈</span>
-          <span class="category__open-marker">⯆</span>
-        </span>
-
-      <b>
-        {{ .name }}
-      </b>
-      
-      {{ with .description }}
-        <span class="tooltip tooltip--small">
-          &nbsp; <span class="faded">(?)</span>
-
-          <span class="tooltip__text">
-            {{ . }}
-          </span>
-        </span>
-      {{ end }}
-
-      </div>
-      {{ else }}
-      <div class="padding"></div>
-      {{ end }}
-
-      {{ $categorySystems := where $systems "category" "=" .name }}
-
-      <div class="components">
-      {{ range $categorySystems }}
-        {{ $activeComponentIssues := where $active "Params.affected" "intersect" (slice .name) }}
-
-        {{ $thisIsNotice := where $activeComponentIssues "Params.severity" "=" "notice" }}
-        {{ $thisIsDisrupted := where $activeComponentIssues "Params.severity" "=" "disrupted" }}
-        {{ $thisIsDown := where $activeComponentIssues "Params.severity" "=" "down" }}
-
-        <div class="component" data-status="{{ if $thisIsDown }}down{{ else }}{{ if $thisIsDisrupted }}disrupted{{ else }}{{ if $thisIsNotice }}notice{{ else }}ok{{ end }}{{ end }}{{ end }}">
-          <a href="/affected/{{ .name | urlize }}" class="no-underline">
-            {{ .name }}
-          </a>
-
-          {{ with .description }}
-            <span class="tooltip tooltip--small">
-              &nbsp; <span class="faded">(?)</span>
-
-              <span class="tooltip__text">
-                {{ . }}
-              </span>
-            </span>
-          {{ end }}
-
-          <span class="component-status">
-            {{ if $thisIsDown }}
-              {{ T "thisIsDown" }}
-            {{ else }}
-            {{ if $thisIsDisrupted }}
-              {{ T "thisIsDisrupted" }}
-            {{ else }}
-            {{ if $thisIsNotice }}
-              {{ T "thisIsNotice" }}
-            {{ else }}
-              {{ T "thisIsOk" }}
-            {{ end }}{{ end }}{{ end }}
-          </span>
-
-          {{ with .partial }}
-          <div>
-            {{ partial . . }}
-          </div>
-          {{ end }}
-        </div>
-      {{ end }}
-      </div>
-    </div>
-  {{ end }}
-
+{{ $systems := .Site.Params.systems }}
+{{ $categories := .Site.Params.categories }}
+{{ range $categories }}
+<div class="usa-accordion shadow-5">
+  <h2 class="usa-accordion__heading">
+    <button class="usa-accordion__button" aria-controls="{{ .name | urlize }}" aria-expanded="true">
+      <a class="usa-button usa-button--base" href="{{ .name | urlize }}">{{ .name }}</a>
+    </button>
+    <i class="float-right">{{ with .description }}{{ . }}{{ end }}</i>
+  </h2>  
+  <div id="{{ .name | urlize }}" class="usa-accordion__content usa-prose">
+    {{ $categorySystems := where $systems "category" "=" .name }}
+    {{ range $categorySystems }}
+    <a class="usa-button usa-button--outline" href="{{ .name }}">{{ .name }}</a>
+    <p>{{ .Content | safeHTML | truncate 500 "…" }}</p>
+  </div>
 </div>
+{{ end }}
+{{ end }}
+

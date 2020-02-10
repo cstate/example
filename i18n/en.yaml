@@ -87,9 +87,9 @@
 
 
 - id: calmBeforeTheStorm
-  translation: Is it the calm before the storm?
+  translation: Normal Operations
 - id: noIncidentsDesc
-  translation: This status page has no logged incidents. This may be because the status page owner (or owners) have recently set up their status page, have had no downtime, or have not logged any downtime.
+  translation: No issues or incidents to report at this time.
 
 
 - id: continueReading
@@ -104,7 +104,7 @@
 ##
 
 - id: goBack
-  translation: Go back to
+  translation: Go back
 - id: backToTop
   translation: Back to top
 - id: poweredBy

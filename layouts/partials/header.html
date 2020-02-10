@@ -3,7 +3,8 @@
 {{ end }}
 
 {{ if .Site.Params.useLargeHeaderDesign }}
-<div class="header header--large">
+<!-- 
+  <div class="header header--large">
   <div class="contain contain--more center">
     <a href="/" class="header__logo">
       {{ if .Site.Params.useLogo }}
@@ -14,18 +15,24 @@
     </a>
   </div>
 </div>
+-->
 {{ else }}
-<div class="header">
-  <div class="contain">
-    <a href="/" class="header__logo header__logo--small">
-      {{ if .Site.Params.useLogo }}
-        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
-          {{ else }}
-        <h1>{{ .Site.Title }}</h1>
-      {{ end }}
-    </a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+  <div class="usa-logo" id="basic-logo">
+    <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">{{ .Site.Title }}</a></em>
   </div>
+  <button class="usa-menu-btn">Menu</button>
 </div>
+<nav aria-label="Primary navigation" class="usa-nav">
+  {{ with $.Site.Home.OutputFormats.Get "rss" }}
+  <a href="{{ .Permalink }}" class="usa-button usa-button--outline float-right">⚡ {{ T "rss" }}</a>
+  {{ end }}
+</nav>
+  </div>
+</header>
 {{ end }}
 
 {{ if .Site.Params.enableCustomHTML }}

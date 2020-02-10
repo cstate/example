@@ -7,41 +7,46 @@ params:
   alwaysKeepBrandColor: true
   brand: '#112e51'
   categories:
-    - closed: true
-      description: The main servers are located here.
-      name: North Coast
-    - name: East Coast
-    - name: Uncategorized
+    - name: Website
+      description: Website(s) are located here.
+    - name: API
+      description: API(s) are located here.
+    - name: Database
+      description: Database(s)are located here.
+    - name: Network
+      description: Networking component(s) are located here.   
   dateFormat: 'Monday, January 2, 2006 15:04 MST'
-  description: >-
+  description: |
     We continuously monitor the status of our services and if there are any
     interruptions, a note will be posted here.
-  disableDarkMode: true
+  disableDarkMode: false
   disrupted: '#e98e1e'
   down: '#e60000'
   googleAnalytics: UA-00000000-1
-  incidentHistoryFormat: yearly
+  incidentHistoryFormat: all
   incidentPostsPerPage: 10
   logo: /img/favicon.png
   notice: '#4349fb'
   ok: '#2fcc66'
   shortDateFormat: 'Monday, January 2, 2006 15:04 MST'
   systems:
-    - category: North Coast
-      name: Gateway
-    - category: East Coast
-      name: Backup Gateway
-    - category: Uncategorized
+    - name: CMS
+      description: Frontend of the system.
+      category: Website
+    - name: Swagger
       description: The guts of the application.
-      name: API
-    - category: Uncategorized
-      description: >-
+      category: API
+    - name: Postgresql
+      description: The guts of the application.
+      category: Database    
+    - name: Cloudfront
+      description: |
         This is the service responsible for serving images, audio, and video. It
         is reliant on our CDN.
-      name: Media Proxy
+      category: Network
   useLargeHeaderDesign: false
   useLogo: true
-theme: cstate
+#theme: cstate
 preserveTaxonomyNames: true
 taxonomies:
   affected: affected
