@@ -7,7 +7,7 @@ This is the default cState status page website directory/folder.
 
 ## Are you updating? Use these commands
 
-Download yoru site with all the directories. `git clone --recursive <your repo link goes here>`
+Download your site with all the directories. `git clone --recursive <your repo link goes here>`
 
 Update the cState theme submodule. `git submodule foreach git pull origin master`
 
