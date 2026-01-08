@@ -1,1 +1,3 @@
-/data/uptime.json  https:netlify-uptime-json-bucket.s3.amazonaws.com/netlify/data/uptime.json  200
+
+# Proxy uptime JSON from S3 via Netlify
+/data/uptime.json https://netlify-uptime-json-bucket.s3.amazonaws.com/netlify/data/uptime.json 200
