@@ -1,15 +1,15 @@
 {
   "is": "system",
   "title": "Media Proxy",
-  "permalink": "http://localhost:1313/affected/media-proxy/",
+  "permalink": "https://example.com/affected/media-proxy/",
   "status": "ok", 
   "pages": [
       {
         "is": "issue",
         "title": "US East Connection Issues",
         "createdAt": "2018-04-25 04:13:00 +0000 UTC",
-        "lastMod": "2019-12-21 21:27:28 +0200 EET",
-        "permalink": "http://localhost:1313/issues/2018-05-25-us-east-conn-issues/",
+        "lastMod": "2019-12-21 21:27:28 +0200 +0200",
+        "permalink": "https://example.com/issues/2018-05-25-us-east-conn-issues/",
         "severity": "down",
         "resolved": true,
         "informational": false,
@@ -20,10 +20,10 @@
     ,
       {
         "is": "issue",
-        "title": "Unavailable Guilds & Connection Issues",
+        "title": "Unavailable Guilds \u0026 Connection Issues",
         "createdAt": "2018-04-13 15:54:00 +0000 UTC",
-        "lastMod": "2020-02-29 19:16:59 +0200 EET",
-        "permalink": "http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/",
+        "lastMod": "2020-02-29 19:16:59 +0200 +0200",
+        "permalink": "https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/",
         "severity": "down",
         "resolved": true,
         "informational": false,

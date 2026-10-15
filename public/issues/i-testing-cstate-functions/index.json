@@ -3,12 +3,12 @@
   "title": "Testing New cState Features",
   "body": "\u003cp\u003eThere is a new feature in cState version 4 that lets you make what are called \u003cem\u003einformational\u003c/em\u003e posts. The main difference is that there will be no \u003cem\u003eUnresolved\u003c/em\u003e or \u003cem\u003eResolved in under a minute\u003c/em\u003e text on the pages.\u003c/p\u003e\n\u003cp\u003eThis is essentially a page with a date and title that shows up in the incident history.\u003c/p\u003e\n",
   "createdAt": "2019-10-04 18:05:00 +0000 UTC",
-  "lastMod": "2021-04-17 14:19:08 +0300 EEST",
-  "permalink": "http://localhost:1313/issues/i-testing-cstate-functions/",
-  "severity": "<no value>",
+  "lastMod": "2021-04-17 14:19:08 +0300 +0300",
+  "permalink": "https://example.com/issues/i-testing-cstate-functions/",
+  "severity": "",
   "resolved": false,
   "informational": true,
-  "resolvedAt": "<no value>",
+  "resolvedAt": "",
   "affected": [],
   "filename": "i-testing-cstate-functions.md"
 }

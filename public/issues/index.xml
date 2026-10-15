@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <link rel="alternate" type="text/html" href="http://localhost:1313/"/>
+    <link rel="alternate" type="text/html" href="https://example.com"/>
     <title>Issues on Eggsample Status</title>
-    <link>http://localhost:1313/issues/</link>
+    <link>https://example.com/issues/</link>
     <description>Incident history</description>
     <generator>github.com/cstate</generator>
     <language>en</language>
@@ -13,39 +13,39 @@
     
     
     
-      <atom:link href="http://localhost:1313/issues/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="https://example.com/issues/index.xml" rel="self" type="application/rss+xml" />
     
     
       <item>
         <title>Maintenance Announcement</title>
-        <link>http://localhost:1313/issues/2024-02-24-maintenance-window/</link>
+        <link>https://example.com/issues/2024-02-24-maintenance-window/</link>
         <pubDate>Sat, 24 Feb 2024 10:35:00 +0000</pubDate>
-        <guid>http://localhost:1313/issues/2024-02-24-maintenance-window/</guid>
+        <guid>https://example.com/issues/2024-02-24-maintenance-window/</guid>
         <category></category>
-        <description>&lt;p&gt;We will shut down our network at midnight UTC on Feb 24. This does not affect the current status.&lt;/p&gt;</description>
+        <description>We will shut down our network at midnight UTC on Feb 24. This does not affect the current status.</description>
         <content type="html">&lt;p&gt;We will shut down our network at midnight UTC on Feb 24. This does not affect the current status.&lt;/p&gt;
 </content>
       </item>
     
       <item>
         <title>[Resolved] New Pipeline Rollout</title>
-        <link>http://localhost:1313/issues/2019-10-08-testing-new-pipeline/</link>
+        <link>https://example.com/issues/2019-10-08-testing-new-pipeline/</link>
         <pubDate>Sat, 05 Oct 2019 16:24:00 +0000</pubDate>
-        <guid>http://localhost:1313/issues/2019-10-08-testing-new-pipeline/</guid>
+        <guid>https://example.com/issues/2019-10-08-testing-new-pipeline/</guid>
         <category>2019-10-05 16:58:00</category>
-        <description>&lt;p&gt;There may be disruptions in the rollout.&lt;/p&gt;</description>
+        <description>There may be disruptions in the rollout.</description>
         <content type="html">&lt;p&gt;There may be disruptions in the rollout.&lt;/p&gt;
 </content>
       </item>
     
       <item>
         <title>Testing New cState Features</title>
-        <link>http://localhost:1313/issues/i-testing-cstate-functions/</link>
+        <link>https://example.com/issues/i-testing-cstate-functions/</link>
         <pubDate>Fri, 04 Oct 2019 18:05:00 +0000</pubDate>
-        <guid>http://localhost:1313/issues/i-testing-cstate-functions/</guid>
+        <guid>https://example.com/issues/i-testing-cstate-functions/</guid>
         <category></category>
-        <description>&lt;p&gt;There is a new feature in cState version 4 that lets you make what are called &lt;em&gt;informational&lt;/em&gt; posts. The main difference is that there will be no &lt;em&gt;Unresolved&lt;/em&gt; or &lt;em&gt;Resolved in under a minute&lt;/em&gt; text on the pages.&lt;/p&gt;
-&lt;p&gt;This is essentially a page with a date and title that shows up in the incident history.&lt;/p&gt;</description>
+        <description>There is a new feature in cState version 4 that lets you make what are called informational posts. The main difference is that there will be no Unresolved or Resolved in under a minute text on the pages.
+This is essentially a page with a date and title that shows up in the incident history.</description>
         <content type="html">&lt;p&gt;There is a new feature in cState version 4 that lets you make what are called &lt;em&gt;informational&lt;/em&gt; posts. The main difference is that there will be no &lt;em&gt;Unresolved&lt;/em&gt; or &lt;em&gt;Resolved in under a minute&lt;/em&gt; text on the pages.&lt;/p&gt;
 &lt;p&gt;This is essentially a page with a date and title that shows up in the incident history.&lt;/p&gt;
 </content>
@@ -53,23 +53,11 @@
     
       <item>
         <title>[Resolved] US East Connection Issues</title>
-        <link>http://localhost:1313/issues/2018-05-25-us-east-conn-issues/</link>
+        <link>https://example.com/issues/2018-05-25-us-east-conn-issues/</link>
         <pubDate>Wed, 25 Apr 2018 04:13:00 +0000</pubDate>
-        <guid>http://localhost:1313/issues/2018-05-25-us-east-conn-issues/</guid>
+        <guid>https://example.com/issues/2018-05-25-us-east-conn-issues/</guid>
         <category>2018-04-25 04:13:59</category>
-        <description>&lt;p&gt;&lt;em&gt;Resolved&lt;/em&gt; -
-We believe all users experiencing issues have been able to connect at this time. 
-  &lt;span class=&#34;faded&#34;&gt;(05:54 UTC — May 25)&lt;/span&gt;
-
-&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Monitoring&lt;/em&gt; - We believe the connectivity issues are being caused by an isolated ISP issue. We&amp;rsquo;ve had reports that swapping to Google DNS servers (see here; &lt;a href=&#34;https://developers.google.com/speed/public-dns/docs/using&#34;&gt;https://developers.google.com/speed/public-dns/docs/using&lt;/a&gt;) resolves the problem for users. 
-  &lt;span class=&#34;faded&#34;&gt;(04:40 UTC — May 25)&lt;/span&gt;
-
-&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Investigating&lt;/em&gt; - We&amp;rsquo;re aware of reports that users are experiencing connection issues on the East coast of the United States. We&amp;rsquo;re currently investigating these issues, and apologize for any inconvenience it may be causing you. 
-  &lt;span class=&#34;faded&#34;&gt;(04:13 UTC — May 25)&lt;/span&gt;
-
-&lt;/p&gt;</description>
+        <description>Resolved - We believe all users experiencing issues have been able to connect at this time. (05:54 UTC — May 25) Monitoring - We believe the connectivity issues are being caused by an isolated ISP issue. We&amp;rsquo;ve had reports that swapping to Google DNS servers (see here; https://developers.google.com/speed/public-dns/docs/using) resolves the problem for users. (04:40 UTC — May 25) Investigating - We&amp;rsquo;re aware of reports that users are experiencing connection issues on the East coast of the United States.</description>
         <content type="html">&lt;p&gt;&lt;em&gt;Resolved&lt;/em&gt; -
 We believe all users experiencing issues have been able to connect at this time. 
   &lt;span class=&#34;faded&#34;&gt;(05:54 UTC — May 25)&lt;/span&gt;
@@ -88,12 +76,12 @@ We believe all users experiencing issues have been able to connect at this time.
     
       <item>
         <title>[Resolved] Unavailable Guilds &amp; Connection Issues</title>
-        <link>http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/</link>
+        <link>https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/</link>
         <pubDate>Fri, 13 Apr 2018 15:54:00 +0000</pubDate>
-        <guid>http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/</guid>
+        <guid>https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/</guid>
         <category>2018-04-13 17:30:00</category>
-        <description>&lt;p&gt;&lt;em&gt;Post-mortem&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;At approximately 14:01, a Redis instance acting as the primary for a highly-available cluster used by our API services was migrated automatically by Google’s Cloud Platform. This migration caused the node to incorrectly drop offline, forcing the cluster to rebalance and trigger known issues with the way our API instances handle Redis failover. After resolving this partial outage, unnoticed issues on other services caused a cascading failure through Example Chat App’s real time system. These issues caused enough critical impact that Example Chat App’s engineering team was forced to fully restart the service, reconnecting millions of clients over a period of 20 minutes.&lt;/p&gt;</description>
+        <description>Post-mortem
+At approximately 14:01, a Redis instance acting as the primary for a highly-available cluster used by our API services was migrated automatically by Google’s Cloud Platform. This migration caused the node to incorrectly drop offline, forcing the cluster to rebalance and trigger known issues with the way our API instances handle Redis failover. After resolving this partial outage, unnoticed issues on other services caused a cascading failure through Example Chat App’s real time system.</description>
         <content type="html">&lt;p&gt;&lt;em&gt;Post-mortem&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;At approximately 14:01, a Redis instance acting as the primary for a highly-available cluster used by our API services was migrated automatically by Google’s Cloud Platform. This migration caused the node to incorrectly drop offline, forcing the cluster to rebalance and trigger known issues with the way our API instances handle Redis failover. After resolving this partial outage, unnoticed issues on other services caused a cascading failure through Example Chat App’s real time system. These issues caused enough critical impact that Example Chat App’s engineering team was forced to fully restart the service, reconnecting millions of clients over a period of 20 minutes.&lt;/p&gt;
 &lt;hr&gt;
@@ -114,12 +102,12 @@ We believe all users experiencing issues have been able to connect at this time.
     
       <item>
         <title>[Resolved] Issues Sending DMs</title>
-        <link>http://localhost:1313/issues/2018-01-17-sending-dms-impacted/</link>
+        <link>https://example.com/issues/2018-01-17-sending-dms-impacted/</link>
         <pubDate>Sun, 17 Dec 2017 16:24:00 +0000</pubDate>
-        <guid>http://localhost:1313/issues/2018-01-17-sending-dms-impacted/</guid>
+        <guid>https://example.com/issues/2018-01-17-sending-dms-impacted/</guid>
         <category>2017-12-17 16:58:00</category>
-        <description>&lt;p&gt;&lt;em&gt;Update&lt;/em&gt; - This incident has been resolved.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Investigating&lt;/em&gt; - We&amp;rsquo;re aware of an issue affecting sending DMs and viewing online friends. We&amp;rsquo;re online and working on a resolution.&lt;/p&gt;</description>
+        <description>Update - This incident has been resolved.
+Investigating - We&amp;rsquo;re aware of an issue affecting sending DMs and viewing online friends. We&amp;rsquo;re online and working on a resolution.</description>
         <content type="html">&lt;p&gt;&lt;em&gt;Update&lt;/em&gt; - This incident has been resolved.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Investigating&lt;/em&gt; - We&amp;rsquo;re aware of an issue affecting sending DMs and viewing online friends. We&amp;rsquo;re online and working on a resolution.&lt;/p&gt;
 </content>

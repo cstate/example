@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <link rel="alternate" type="text/html" href="http://localhost:1313/"/>
+    <link rel="alternate" type="text/html" href="https://example.com"/>
     <title>Affected on Eggsample Status</title>
-    <link>http://localhost:1313/affected/</link>
+    <link>https://example.com/affected/</link>
     <description>Incident history</description>
     <generator>github.com/cstate</generator>
     <language>en</language>
@@ -13,14 +13,14 @@
     
     
     
-      <atom:link href="http://localhost:1313/affected/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="https://example.com/affected/index.xml" rel="self" type="application/rss+xml" />
     
     
       <item>
         <title>API</title>
-        <link>http://localhost:1313/affected/api/</link>
+        <link>https://example.com/affected/api/</link>
         <pubDate>Sat, 05 Oct 2019 16:24:00 +0000</pubDate>
-        <guid>http://localhost:1313/affected/api/</guid>
+        <guid>https://example.com/affected/api/</guid>
         <category></category>
         <description></description>
         <content type="html"></content>
@@ -28,9 +28,9 @@
     
       <item>
         <title>Gateway</title>
-        <link>http://localhost:1313/affected/gateway/</link>
+        <link>https://example.com/affected/gateway/</link>
         <pubDate>Wed, 25 Apr 2018 04:13:00 +0000</pubDate>
-        <guid>http://localhost:1313/affected/gateway/</guid>
+        <guid>https://example.com/affected/gateway/</guid>
         <category></category>
         <description></description>
         <content type="html"></content>
@@ -38,9 +38,9 @@
     
       <item>
         <title>Media Proxy</title>
-        <link>http://localhost:1313/affected/media-proxy/</link>
+        <link>https://example.com/affected/media-proxy/</link>
         <pubDate>Wed, 25 Apr 2018 04:13:00 +0000</pubDate>
-        <guid>http://localhost:1313/affected/media-proxy/</guid>
+        <guid>https://example.com/affected/media-proxy/</guid>
         <category></category>
         <description></description>
         <content type="html"></content>

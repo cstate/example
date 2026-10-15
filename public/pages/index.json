@@ -1,17 +1,17 @@
 {
   "is": "pages",
   "title": "Pages",
-  "baseURL": "http://localhost:1313/", 
+  "baseURL": "https://example.com",
   "description": "",
   "pages": [
       {
         "is": "page",
         "title": "Example Page",
         "createdAt": "0001-01-01 00:00:00 +0000 UTC",
-        "lastMod": "2019-04-08 21:48:39 +0300 EEST",
-        "permalink": "http://localhost:1313/pages/example-page/",
+        "lastMod": "2019-04-08 21:48:39 +0300 +0300",
+        "permalink": "https://example.com/pages/example-page/",
         "filename": "example-page.md",
-        "summary": "\u003ch1 id=\"title-here\"\u003eTitle here!\u003c/h1\u003e\n\u003cp\u003eThis is an example page that demonstrates the capabilities of a Markdown page in cState.\u003c/p\u003e\n\u003cp\u003eYou can use HTML if the file extension is \u003ccode\u003e.html\u003c/code\u003e, but this one is \u003ccode\u003e.md\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eLet us dive in.\u003c/p\u003e\n\u003cp\u003eParagraphs are separated by a blank line.\u003c/p\u003e\n\u003cp\u003e2nd paragraph. \u003cem\u003eItalic\u003c/em\u003e, \u003cstrong\u003ebold\u003c/strong\u003e, and \u003ccode\u003emonospace\u003c/code\u003e. Itemized lists\nlook like:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003ethis one\u003c/li\u003e\n\u003cli\u003ethat one\u003c/li\u003e\n\u003cli\u003ethe other one\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eNote that \u0026mdash; not considering the asterisk \u0026mdash; the actual text\ncontent starts at 4-columns in.\u003c/p\u003e"
+        "summary": "Title here! This is an example page that demonstrates the capabilities of a Markdown page in cState.\nYou can use HTML if the file extension is .html, but this one is .md.\nLet us dive in.\nParagraphs are separated by a blank line.\n2nd paragraph. Italic, bold, and monospace. Itemized lists look like:\n this one that one the other one  Note that \u0026mdash; not considering the asterisk \u0026mdash; the actual text content starts at 4-columns in."
       }
     
   ]

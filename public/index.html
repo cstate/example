@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,11 +8,11 @@
     
     <meta name="description" content="We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.">
     <title>Eggsample Status</title>
-    <link rel="canonical" href="http://localhost:1313/">
-    <link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="Eggsample Status" />
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Eggsample Status" />
-    <link rel="alternate" type="image/svg+xml" href="http://localhost:1313/index.svg" title="Eggsample Status" />
-    <meta name="generator" content="cState v6.0 - https://github.com/cstate/cstate">
+    <link rel="canonical" href="https://example.com/">
+    <link rel="alternate" type="application/json" href="https://example.com/index.json" title="Eggsample Status" />
+    <link rel="alternate" type="application/rss+xml" href="https://example.com/index.xml" title="Eggsample Status" />
+    <link rel="alternate" type="image/svg+xml" href="https://example.com/index.svg" title="Eggsample Status" />
+    <meta name="generator" content="cState v6.0.2 - https://github.com/cstate/cstate">
     <meta name="theme-color" content="#0a0c0f">
     <script>
     var themeBrandColor = '#0a0c0f';
@@ -34,7 +34,10 @@
       -webkit-tap-highlight-color: rgba(0,0,0, 0.25);
     }
 
-    ::selection { background: #B4D5FF; }
+    ::selection {
+      background: #4c78b8;
+      color: #fff;
+    }
 
     *, *:before, *:after {
       box-sizing: inherit;
@@ -430,6 +433,7 @@
 
         .date { color: #c3bfb6; }
 
+	.tag { color: #fff; }
         .tag, .archive__head { background-color: #1d1f20; }
         .tag:hover { background: #222; }
         .issue:hover,
@@ -474,7 +478,7 @@
 
 <div class="header">
   <div class="contain">
-    <a href="http://localhost:1313/" class="header__logo header__logo--small">
+    <a href="https://example.com" class="header__logo header__logo--small">
       
         <img src="/logo.png" alt="Eggsample Status">
           
@@ -502,6 +506,7 @@
 
 
 
+
 <div class="summary status-box">
 	<div class="summary-flex">
 		<div class="status-text">
@@ -521,7 +526,7 @@
 				</button>
 				<div class="subscribe-dropdown hidden" aria-label="Close dropdown">
 					<ul>
-						<a href="http://localhost:1313//index.xml" target="_blank" rel="noopener noreferrer">
+						<a href="https://example.com/index.xml" target="_blank" rel="noopener noreferrer">
 						<li>
 							<svg viewBox="0 0 512 512" class="subscribe-dropdown__icon">
 								<path d="M108.56 342.78a60.34 60.34 0 1 0 60.56 60.44 60.63 60.63 0 0 0-60.56-60.44Z">
@@ -855,81 +860,81 @@
 					switch (chosen) {
 						case 'rss':
 							modalTitle.textContent = 'RSS';
-							modalContent.innerHTML = `<p>Subscribe to updates from this status page.</p>`;
+							modalContent.innerHTML = `<p>"Subscribe to updates from this status page."</p>`;
 							modalActions.innerHTML = `
-							<a href="http:\/\/localhost:1313\//index.xml" target="_blank" rel="noopener noreferrer" class="padding-s">Open</a>
+							<a href="https:\/\/example\.com\/index\.xml" target="_blank" rel="noopener noreferrer" class="padding-s">Open</a>
           `;
 							break;
 
 						case 'email':
 							modalTitle.textContent = 'Email';
-							modalContent.innerHTML = `<p>Subscribe to updates from this status page.</p>
+							modalContent.innerHTML = `<p>"Subscribe to updates from this status page."</p>
             <input type="email" placeholder="Email address..." />`;
 							modalActions.innerHTML = `
-            <button class="btn btn--primary">Subscribe</button>
-            <p class="small-text">We recommend choosing a different method of notification if you need critical updates to be delivered as soon as possible.</p>
+            <button class="btn btn--primary">"Subscribe"</button>
+            <p class="small-text">We recommend choosing a different method of notification if you need critical updates to be delivered as soon as possible\.</p>
           `;
 							break;
 
 						case 'discord':
 							modalTitle.textContent = 'Discord';
-							modalContent.innerHTML = `<p>Subscribe to updates from this status page. (Discord server invitation)</p>`;
-							copyText = 'YOUR_DISCORD_INVITE_LINK'; 
+							modalContent.innerHTML = `<p>"Subscribe to updates from this status page." (Discord server invitation)</p>`;
+							copyText = 'YOUR_DISCORD_INVITE_LINK'; // Replace with your Discord invite link
 							modalActions.innerHTML = `
-            <button class="btn btn--primary" data-copy="${copyText}">Copy</button>
-            <p class="small-text">Looking for more information about this embed and how you can use it?</p>
+            <button class="btn btn--primary" data-copy="${copyText}">"Copy"</button>
+            <p class="small-text">Looking for more information about this embed and how you can use it\?</p>
           `;
 							break;
 
 						case 'slack':
 							modalTitle.textContent = 'Slack';
-							modalContent.innerHTML = `<p>Subscribe to updates from this status page. (Slack workspace link)</p>`;
-							copyText = 'YOUR_SLACK_WORKSPACE_LINK'; 
+							modalContent.innerHTML = `<p>"Subscribe to updates from this status page." (Slack workspace link)</p>`;
+							copyText = 'YOUR_SLACK_WORKSPACE_LINK'; // Replace with your Slack workspace link
 							modalActions.innerHTML = `
-            <button class="btn btn--primary" data-copy="${copyText}">Copy</button>
-            <p class="small-text">Looking for more information about this embed and how you can use it?</p>
+            <button class="btn btn--primary" data-copy="${copyText}">"Copy"</button>
+            <p class="small-text">Looking for more information about this embed and how you can use it\?</p>
           `;
 							break;
 
 						case 'webhook':
 							modalTitle.textContent = 'Webhook';
-							modalContent.innerHTML = `<p>Subscribe to updates from this status page.</p>
+							modalContent.innerHTML = `<p>"Subscribe to updates from this status page."</p>
             <input type="text" placeholder="Webhook URL" />`;
 							modalActions.innerHTML = `
-            <button class="btn btn--primary">Subscribe</button>
-            <p class="small-text">Please note that the API may be subject to rate limiting.</p>
+            <button class="btn btn--primary">"Subscribe"</button>
+            <p class="small-text">Please note that the API may be subject to rate limiting\.</p>
           `;
 							break;
 
 						case 'push':
 							modalTitle.textContent = 'Push notifications';
-							modalContent.innerHTML = `<p>You can subscribe to this status page via push notifications through your browser. You will have to do this on every device you want to receive notifications on. Please note that this feature is subject to browser support and may not work on all devices as expected.</p>`;
+							modalContent.innerHTML = `<p>"You can subscribe to this status page via push notifications through your browser. You will have to do this on every device you want to receive notifications on. Please note that this feature is subject to browser support and may not work on all devices as expected."</p>`;
 							modalActions.innerHTML = `
             <button class="btn btn--primary">Subscribe</button>
-            <p class="small-text">We recommend choosing a different method of notification if you need critical updates to be delivered as soon as possible.</p>
+            <p class="small-text">"We recommend choosing a different method of notification if you need critical updates to be delivered as soon as possible."</p>
           `;
 							break;
 
 						case 'api':
 							modalTitle.textContent = 'API';
-							modalContent.innerHTML = `<p>You can use our API to integrate the information and updates from this status page into your own website or application. Simply make a GET request to the following URL: <br /> <code>http:\/\/localhost:1313\/index.json</code></p>`;
+							modalContent.innerHTML = `<p>You can use our API to integrate the information and updates from this status page into your own website or application\. Simply make a GET request to the following URL: <br /> <code>"https://example.com"index.json</code></p>`;
 							modalActions.innerHTML = `
-            <a href="https://github.com/cstate/cstate/wiki/API" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Read documentation</a>
-            <p>Please note that the API may be subject to rate limiting.</p>
+            <a href="https://github.com/cstate/cstate/wiki/API" target="_blank" rel="noopener noreferrer" class="btn btn--primary">"Read documentation"</a>
+            <p>Please note that the API may be subject to rate limiting\.</p>
           `;
 							break;
 
 						default:
 							modalTitle.textContent = 'Subscribe';
-							modalContent.innerHTML = `<p>Subscribe to updates from this status page.</p>`;
+							modalContent.innerHTML = `<p>"Subscribe to updates from this status page."</p>`;
 							modalActions.innerHTML = `
             <button class="btn btn--primary">Subscribe</button>
-            <p class="small-text">Looking for more information about this embed and how you can use it?</p>
+            <p class="small-text">"Looking for more information about this embed and how you can use it?"</p>
           `;
 							break;
 					}
 
-					
+					// Add event listeners to copy buttons
 					const copyButtons = modalActions.querySelectorAll('button[data-copy]');
 					copyButtons.forEach(button => {
 						button.addEventListener('click', () => {
@@ -1397,7 +1402,7 @@
 
 
 
-<a href="http://localhost:1313/issues/2024-02-24-maintenance-window/" class="issue no-underline">
+<a href="https://example.com/issues/2024-02-24-maintenance-window/" class="issue no-underline">
   
 
   <small class="date float-right relative-time" title="February 24, 2024 at 10:35 AM UTC" data-date="2024-02-24T10:35:00Z">
@@ -1421,7 +1426,8 @@
 
 
 
-<a href="http://localhost:1313/issues/2019-10-08-testing-new-pipeline/" class="issue no-underline">
+
+<a href="https://example.com/issues/2019-10-08-testing-new-pipeline/" class="issue no-underline">
   
     <small class="date float-right relative-time" title="October 5, 2019 at 4:24 PM UTC" data-date="2019-10-05T16:24:00Z">
       
@@ -1466,7 +1472,8 @@
 
 
 
-<a href="http://localhost:1313/issues/i-testing-cstate-functions/" class="issue no-underline">
+
+<a href="https://example.com/issues/i-testing-cstate-functions/" class="issue no-underline">
   
 
   <small class="date float-right relative-time" title="October 4, 2019 at 6:05 PM UTC" data-date="2019-10-04T18:05:00Z">
@@ -1490,7 +1497,8 @@
 
 
 
-<a href="http://localhost:1313/issues/2018-05-25-us-east-conn-issues/" class="issue no-underline">
+
+<a href="https://example.com/issues/2018-05-25-us-east-conn-issues/" class="issue no-underline">
   
     <small class="date float-right relative-time" title="April 25, 2018 at 4:13 AM UTC" data-date="2018-04-25T04:13:00Z">
       
@@ -1533,7 +1541,8 @@
 
 
 
-<a href="http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/" class="issue no-underline">
+
+<a href="https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/" class="issue no-underline">
   
     <small class="date float-right relative-time" title="April 13, 2018 at 3:54 PM UTC" data-date="2018-04-13T15:54:00Z">
       
@@ -1580,7 +1589,8 @@
 
 
 
-<a href="http://localhost:1313/issues/2018-01-17-sending-dms-impacted/" class="issue no-underline">
+
+<a href="https://example.com/issues/2018-01-17-sending-dms-impacted/" class="issue no-underline">
   
     <small class="date float-right relative-time" title="December 17, 2017 at 4:24 PM UTC" data-date="2017-12-17T16:24:00Z">
       
@@ -1622,6 +1632,7 @@
 
 
 
+
       <div class="padding"></div>
     </div>
   
@@ -1630,7 +1641,7 @@
   
 
 
-  console.log('cState v6.0 - https://github.com/cstate/cstate');
+  console.log('cState v6.0.2 - https://github.com/cstate/cstate');
   document.getElementsByTagName('html')[0].className = 'js';
 
   
@@ -1753,7 +1764,7 @@
 
 <div class="footer">
   <div class="contain">
-    <p><strong class="bold">&copy; Eggsample Status, 2025</strong>
+    <p><strong class="bold">&copy; Eggsample Status, 2026</strong>
        &nbsp; • &nbsp; <a href="#">Back to top</a>
     </p>
 
@@ -1770,7 +1781,7 @@
           ⚡
           Subscribe via RSS —
           
-            <a href="http://localhost:1313/index.xml" class="no-underline">to all updates</a>
+            <a href="https://example.com/index.xml" class="no-underline">to all updates</a>
           
           
         </small>

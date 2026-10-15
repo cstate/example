@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <link rel="alternate" type="text/html" href="http://localhost:1313/"/>
+    <link rel="alternate" type="text/html" href="https://example.com"/>
     <title>Pages on Eggsample Status</title>
-    <link>http://localhost:1313/pages/</link>
+    <link>https://example.com/pages/</link>
     <description>Incident history</description>
     <generator>github.com/cstate</generator>
     <language>en</language>
     
     
     
-      <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="https://example.com/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
       <item>
         <title>Example Page</title>
-        <link>http://localhost:1313/pages/example-page/</link>
+        <link>https://example.com/pages/example-page/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        <guid>http://localhost:1313/pages/example-page/</guid>
+        <guid>https://example.com/pages/example-page/</guid>
         <category></category>
-        <description>&lt;h1 id=&#34;title-here&#34;&gt;Title here!&lt;/h1&gt;
-&lt;p&gt;This is an example page that demonstrates the capabilities of a Markdown page in cState.&lt;/p&gt;
-&lt;p&gt;You can use HTML if the file extension is &lt;code&gt;.html&lt;/code&gt;, but this one is &lt;code&gt;.md&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Let us dive in.&lt;/p&gt;
-&lt;p&gt;Paragraphs are separated by a blank line.&lt;/p&gt;
-&lt;p&gt;2nd paragraph. &lt;em&gt;Italic&lt;/em&gt;, &lt;strong&gt;bold&lt;/strong&gt;, and &lt;code&gt;monospace&lt;/code&gt;. Itemized lists
-look like:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;this one&lt;/li&gt;
-&lt;li&gt;that one&lt;/li&gt;
-&lt;li&gt;the other one&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Note that &amp;mdash; not considering the asterisk &amp;mdash; the actual text
-content starts at 4-columns in.&lt;/p&gt;</description>
+        <description>Title here! This is an example page that demonstrates the capabilities of a Markdown page in cState.
+You can use HTML if the file extension is .html, but this one is .md.
+Let us dive in.
+Paragraphs are separated by a blank line.
+2nd paragraph. Italic, bold, and monospace. Itemized lists look like:
+ this one that one the other one  Note that &amp;mdash; not considering the asterisk &amp;mdash; the actual text content starts at 4-columns in.</description>
         <content type="html">&lt;h1 id=&#34;title-here&#34;&gt;Title here!&lt;/h1&gt;
 &lt;p&gt;This is an example page that demonstrates the capabilities of a Markdown page in cState.&lt;/p&gt;
 &lt;p&gt;You can use HTML if the file extension is &lt;code&gt;.html&lt;/code&gt;, but this one is &lt;code&gt;.md&lt;/code&gt;.&lt;/p&gt;
@@ -70,18 +62,18 @@ for i in 1 .. 10 { do-something(i) }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As you probably guessed, indented 4 spaces. By the way, instead of
 indenting the block, you can use delimited blocks, if you like:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;define foobar() {
-    print &amp;#34;Welcome to flavor country!&amp;#34;;
+&lt;pre&gt;&lt;code&gt;define foobar() {
+    print &amp;quot;Welcome to flavor country!&amp;quot;;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;(which makes copying &amp;amp; pasting easier). You can optionally mark the
 delimited block for Pandoc to syntax highlight it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; time
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Quick, count to ten!&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# (but not *too* quick)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(i)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;an-h3-header&#34;&gt;An h3 header&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; time
+&lt;span style=&#34;color:#75715e&#34;&gt;# Quick, count to ten!&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;):
+    &lt;span style=&#34;color:#75715e&#34;&gt;# (but not *too* quick)&lt;/span&gt;
+    time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(i)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;an-h3-header&#34;&gt;An h3 header&lt;/h3&gt;
 &lt;p&gt;Now a nested list:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -116,34 +108,34 @@ doc&lt;/a&gt;, and to a &lt;a href=&#34;#an-h2-header&#34;&gt;section heading in
 doc&lt;/a&gt;. Here&amp;rsquo;s a footnote &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;Tables can look like this:&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Name           Size  Material      Color&lt;/th&gt;
-          &lt;th&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;All Business      9  leather       brown&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Roundabout       10  hemp canvas   natural&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Cinderella       11  glass         transparent&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name           Size  Material      Color&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;All Business      9  leather       brown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Roundabout       10  hemp canvas   natural&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cinderella       11  glass         transparent&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Table: Shoes sizes, materials, and colors.&lt;/p&gt;
 &lt;p&gt;(The above is the caption for the table.) Pandoc also supports
@@ -180,14 +172,14 @@ math should get its own line like so:&lt;/p&gt;
 &lt;p&gt;$$I = \int \rho R^{2} dV$$&lt;/p&gt;
 &lt;p&gt;And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: `foo`, *bar*, etc.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;Some footnote text.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Some footnote text. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
       </item>
     

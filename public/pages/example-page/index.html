@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Title here!
-This is an example page that demonstrates the capabilities of a Markdown page in cState.
+    <meta name="description" content="Title here! This is an example page that demonstrates the capabilities of a Markdown page in cState.
 You can use HTML if the file extension is .html, but this one is .md.
 Let us dive in.
 Paragraphs are separated by a blank line.
-2nd paragraph. Italic, bold, and monospace. Itemized lists
-look like:
-
-this one
-that one
-the other one
-
-Note that &mdash; not considering the asterisk &mdash; the actual text
-content starts at 4-columns in.">
+2nd paragraph. Italic, bold, and monospace. Itemized lists look like:
+ this one that one the other one  Note that &mdash; not considering the asterisk &mdash; the actual text content starts at 4-columns in.">
     <title>Example Page | Eggsample Status</title>
-    <link rel="canonical" href="http://localhost:1313/pages/example-page/">
-    <link rel="alternate" type="application/json" href="http://localhost:1313/pages/example-page/index.json" title="Eggsample Status" />
-    <meta name="generator" content="cState v6.0 - https://github.com/cstate/cstate">
+    <link rel="canonical" href="https://example.com/pages/example-page/">
+    <link rel="alternate" type="application/json" href="https://example.com/pages/example-page/index.json" title="Eggsample Status" />
+    <meta name="generator" content="cState v6.0.2 - https://github.com/cstate/cstate">
     <meta name="theme-color" content="#0a0c0f">
     <script>
     var themeBrandColor = '#0a0c0f';
@@ -45,7 +37,10 @@ content starts at 4-columns in.">
       -webkit-tap-highlight-color: rgba(0,0,0, 0.25);
     }
 
-    ::selection { background: #B4D5FF; }
+    ::selection {
+      background: #4c78b8;
+      color: #fff;
+    }
 
     *, *:before, *:after {
       box-sizing: inherit;
@@ -441,6 +436,7 @@ content starts at 4-columns in.">
 
         .date { color: #c3bfb6; }
 
+	.tag { color: #fff; }
         .tag, .archive__head { background-color: #1d1f20; }
         .tag:hover { background: #222; }
         .issue:hover,
@@ -473,7 +469,7 @@ content starts at 4-columns in.">
 
   <body class="default single">
     <div class="contain">
-      <a href="http://localhost:1313/">← Go back to <em>Eggsample Status</em></a>
+      <a href="https://example.com">← Go back to <em>Eggsample Status</em></a>
       
       <div class="padding"></div>
 
@@ -514,18 +510,18 @@ for i in 1 .. 10 { do-something(i) }
 </code></pre>
 <p>As you probably guessed, indented 4 spaces. By the way, instead of
 indenting the block, you can use delimited blocks, if you like:</p>
-<pre tabindex="0"><code>define foobar() {
-    print &#34;Welcome to flavor country!&#34;;
+<pre><code>define foobar() {
+    print &quot;Welcome to flavor country!&quot;;
 }
 </code></pre><p>(which makes copying &amp; pasting easier). You can optionally mark the
 delimited block for Pandoc to syntax highlight it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Quick, count to ten!</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (but not *too* quick)</span>
-</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
-</span></span><span style="display:flex;"><span>    print(i)
-</span></span></code></pre></div><h3 id="an-h3-header">An h3 header</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> time
+<span style="color:#75715e"># Quick, count to ten!</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
+    <span style="color:#75715e"># (but not *too* quick)</span>
+    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+    <span style="color:#66d9ef">print</span>(i)
+</code></pre></div><h3 id="an-h3-header">An h3 header</h3>
 <p>Now a nested list:</p>
 <ol>
 <li>
@@ -560,34 +556,34 @@ doc</a>, and to a <a href="#an-h2-header">section heading in the current
 doc</a>. Here&rsquo;s a footnote <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>Tables can look like this:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Name           Size  Material      Color</th>
-          <th></th>
-          <th></th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>All Business      9  leather       brown</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Roundabout       10  hemp canvas   natural</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Cinderella       11  glass         transparent</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Name           Size  Material      Color</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Business      9  leather       brown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Roundabout       10  hemp canvas   natural</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cinderella       11  glass         transparent</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
 </table>
 <p>Table: Shoes sizes, materials, and colors.</p>
 <p>(The above is the caption for the table.) Pandoc also supports
@@ -624,14 +620,14 @@ math should get its own line like so:</p>
 <p>$$I = \int \rho R^{2} dV$$</p>
 <p>And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
-<div class="footnotes" role="doc-endnotes">
+<section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1">
-<p>Some footnote text.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1" role="doc-endnote">
+<p>Some footnote text. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</div>
+</section>
 
     </div>
 
@@ -639,7 +635,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
   
 
 
-  console.log('cState v6.0 - https://github.com/cstate/cstate');
+  console.log('cState v6.0.2 - https://github.com/cstate/cstate');
   document.getElementsByTagName('html')[0].className = 'js';
 
   
@@ -762,7 +758,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
 
 <div class="footer">
   <div class="contain">
-    <p><strong class="bold">&copy; Eggsample Status, 2025</strong>
+    <p><strong class="bold">&copy; Eggsample Status, 2026</strong>
        &nbsp; • &nbsp; <a href="#">Back to top</a>
     </p>
 
@@ -779,7 +775,7 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
           ⚡
           Subscribe via RSS —
           
-            <a href="http://localhost:1313/index.xml" class="no-underline">to all updates</a>
+            <a href="https://example.com/index.xml" class="no-underline">to all updates</a>
           
           
           

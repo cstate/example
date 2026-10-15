@@ -1,47 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.com/</loc>
     <lastmod>2021-10-10T17:02:38+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/</loc>
     <lastmod>2021-10-10T17:02:38+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/2024-02-24-maintenance-window/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/2024-02-24-maintenance-window/</loc>
     <lastmod>2021-10-10T17:02:38+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/affected/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/affected/</loc>
     <lastmod>2021-04-17T14:19:08+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/affected/api/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/affected/api/</loc>
     <lastmod>2021-04-17T14:19:08+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/2019-10-08-testing-new-pipeline/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/2019-10-08-testing-new-pipeline/</loc>
     <lastmod>2021-04-17T14:19:08+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/i-testing-cstate-functions/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/i-testing-cstate-functions/</loc>
     <lastmod>2021-04-17T14:19:08+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/affected/gateway/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/affected/gateway/</loc>
     <lastmod>2019-12-21T21:27:28+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/affected/media-proxy/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/affected/media-proxy/</loc>
     <lastmod>2020-02-29T19:16:59+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/2018-05-25-us-east-conn-issues/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/2018-05-25-us-east-conn-issues/</loc>
     <lastmod>2019-12-21T21:27:28+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/</loc>
     <lastmod>2020-02-29T19:16:59+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/issues/2018-01-17-sending-dms-impacted/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/issues/2018-01-17-sending-dms-impacted/</loc>
     <lastmod>2019-12-21T21:27:28+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pages/example-page/</loc>
-    <lastmod>2019-04-08T21:48:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+  </url>
+
+  <url>
+    <loc>https://example.com/pages/example-page/</loc>
     <lastmod>2019-04-08T21:48:39+03:00</lastmod>
   </url>
+
+  <url>
+    <loc>https://example.com/pages/</loc>
+    <lastmod>2019-04-08T21:48:39+03:00</lastmod>
+  </url>
+
 </urlset>

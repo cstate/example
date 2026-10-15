@@ -1,11 +1,11 @@
 {
   "is": "index",
-  "cStateVersion": "6.0",
+  "cStateVersion": "6.0.2",
   "apiVersion": "2.0",
   "title": "Eggsample Status",
   "languageCodeHTML": "en",
   "languageCode": "en",
-  "baseURL": "http://localhost:1313/",
+  "baseURL": "https://example.com",
   "description": "We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.",
   "summaryStatus": "ok",
   "categories": [
@@ -36,8 +36,8 @@
         "is": "issue",
         "title": "Maintenance Announcement",
         "createdAt": "2024-02-24 10:35:00 +0000 UTC",
-        "lastMod": "2021-10-10 17:02:38 +0300 EEST",
-        "permalink": "http://localhost:1313/issues/2024-02-24-maintenance-window/",
+        "lastMod": "2021-10-10 17:02:38 +0300 +0300",
+        "permalink": "https://example.com/issues/2024-02-24-maintenance-window/",
         "affected": [],
         "filename": "2024-02-24-maintenance-window.md"
       }
@@ -95,15 +95,15 @@
   ],
   
 
-  "buildDate": "2025-07-30",
-  "buildTime": "17:47",
-  "buildTimezone": "EEST",
+  "buildDate": "2026-10-15",
+  "buildTime": "16:50",
+  "buildTimezone": "UTC",
   "colorBrand": "#0a0c0f",
   "colorOk": "#008000",
   "colorDisrupted": "#cc4400",
   "colorDown": "#e60000",
   "colorNotice": "#24478f",
   "alwaysKeepBrandColor": "true",
-  "logo": "http://localhost:1313/logo.png",
+  "logo": "https://example.com/logo.png",
   "googleAnalytics": "UA-00000000-1"
 }

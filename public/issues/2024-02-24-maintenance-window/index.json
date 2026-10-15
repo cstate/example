@@ -3,12 +3,12 @@
   "title": "Maintenance Announcement",
   "body": "\u003cp\u003eWe will shut down our network at midnight UTC on Feb 24. This does not affect the current status.\u003c/p\u003e\n",
   "createdAt": "2024-02-24 10:35:00 +0000 UTC",
-  "lastMod": "2021-10-10 17:02:38 +0300 EEST",
-  "permalink": "http://localhost:1313/issues/2024-02-24-maintenance-window/",
-  "severity": "<no value>",
+  "lastMod": "2021-10-10 17:02:38 +0300 +0300",
+  "permalink": "https://example.com/issues/2024-02-24-maintenance-window/",
+  "severity": "",
   "resolved": false,
   "informational": true,
-  "resolvedAt": "<no value>",
+  "resolvedAt": "",
   "affected": [],
   "filename": "2024-02-24-maintenance-window.md"
 }

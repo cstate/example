@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <meta name="description" content="Post-mortem
-At approximately 14:01, a Redis instance acting as the primary for a highly-available cluster used by our API services was migrated automatically by Google’s Cloud Platform. This migration caused the node to incorrectly drop offline, forcing the cluster to rebalance and trigger known issues with the way our API instances handle Redis failover. After resolving this partial outage, unnoticed issues on other services caused a cascading failure through Example Chat App’s real time system. These issues caused enough critical impact that Example Chat App’s engineering team was forced to fully restart the service, reconnecting millions of clients over a period of 20 minutes.">
+At approximately 14:01, a Redis instance acting as the primary for a highly-available cluster used by our API services was migrated automatically by Google’s Cloud Platform. This migration caused the node to incorrectly drop offline, forcing the cluster to rebalance and trigger known issues with the way our API instances handle Redis failover. After resolving this partial outage, unnoticed issues on other services caused a cascading failure through Example Chat App’s real time system.">
     <title>Unavailable Guilds &amp; Connection Issues | Eggsample Status</title>
-    <link rel="canonical" href="http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/">
-    <link rel="alternate" type="application/json" href="http://localhost:1313/issues/2018-04-13-unavailable-guilds-connection-issues/index.json" title="Eggsample Status" />
-    <meta name="generator" content="cState v6.0 - https://github.com/cstate/cstate">
+    <link rel="canonical" href="https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/">
+    <link rel="alternate" type="application/json" href="https://example.com/issues/2018-04-13-unavailable-guilds-connection-issues/index.json" title="Eggsample Status" />
+    <meta name="generator" content="cState v6.0.2 - https://github.com/cstate/cstate">
     <meta name="theme-color" content="#0a0c0f">
     <script>
     var themeBrandColor = '#0a0c0f';
@@ -33,7 +33,10 @@ At approximately 14:01, a Redis instance acting as the primary for a highly-avai
       -webkit-tap-highlight-color: rgba(0,0,0, 0.25);
     }
 
-    ::selection { background: #B4D5FF; }
+    ::selection {
+      background: #4c78b8;
+      color: #fff;
+    }
 
     *, *:before, *:after {
       box-sizing: inherit;
@@ -429,6 +432,7 @@ At approximately 14:01, a Redis instance acting as the primary for a highly-avai
 
         .date { color: #c3bfb6; }
 
+	.tag { color: #fff; }
         .tag, .archive__head { background-color: #1d1f20; }
         .tag:hover { background: #222; }
         .issue:hover,
@@ -469,7 +473,7 @@ At approximately 14:01, a Redis instance acting as the primary for a highly-avai
 
   <body class="issues single">
     <div class="contain">
-      <a href="http://localhost:1313/">← Go back to <em>Eggsample Status</em></a>
+      <a href="https://example.com">← Go back to <em>Eggsample Status</em></a>
     </div>
 
     <div class="contain">
@@ -577,7 +581,7 @@ At approximately 14:01, a Redis instance acting as the primary for a highly-avai
   
 
 
-  console.log('cState v6.0 - https://github.com/cstate/cstate');
+  console.log('cState v6.0.2 - https://github.com/cstate/cstate');
   document.getElementsByTagName('html')[0].className = 'js';
 
   
@@ -700,7 +704,7 @@ At approximately 14:01, a Redis instance acting as the primary for a highly-avai
 
 <div class="footer">
   <div class="contain">
-    <p><strong class="bold">&copy; Eggsample Status, 2025</strong>
+    <p><strong class="bold">&copy; Eggsample Status, 2026</strong>
        &nbsp; • &nbsp; <a href="#">Back to top</a>
     </p>
 
@@ -717,7 +721,7 @@ At approximately 14:01, a Redis instance acting as the primary for a highly-avai
           ⚡
           Subscribe via RSS —
           
-            <a href="http://localhost:1313/index.xml" class="no-underline">to all updates</a>
+            <a href="https://example.com/index.xml" class="no-underline">to all updates</a>
           
           
           

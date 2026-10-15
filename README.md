@@ -1,6 +1,8 @@
-# cState Site v6
+# cState Site v6.0.2
 
 This is the default cState status page website directory/folder.
+
+The theme submodule includes [cState v6.0.2](https://github.com/cstate/cstate/releases/tag/6.0.2). The configuration uses `locale` for Hugo 0.158+ compatibility. Existing sites on older Hugo versions can keep `languageCode`.
 
 * Example site repository link (you are here): https://github.com/cstate/example
 * Main cState source code repository: https://github.com/cstate/cstate
